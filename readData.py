@@ -36,7 +36,7 @@ class MnistReader(object):
 
     def read_image_batch(self):
         img, label = self.read_image(self.filename_queue)
-        image_batch = tf.train.batch(img, batch_size=self.batch_size,
+        image_batch = tf.train.batch([img], batch_size=self.batch_size,
                                      num_threads=4,
                                      capacity=1000 + self.batch_size * 3)
         # because VAE is unsupervised learning, we do not need label
