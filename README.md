@@ -7,6 +7,7 @@ VAE(Variational Auto-Encoder) tensorflow
 数据训练用的是mnist,最后生成的图片如下：
 ![](https://github.com/deepblacksky/VAE_tf/blob/master/result.png?raw=true)
 
+
 TODO：
 - 编码解码使用全连接网络
 - 编码解码使用全连接网络并增加正则化
