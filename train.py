@@ -19,10 +19,10 @@ FLAGS = tf.flags.FLAGS
 tf.flags.DEFINE_string('buckets', 'D:\\DL\\aliyun\\VAE\\data', '数据目录')
 tf.flags.DEFINE_string('checkpointDir', 'D:\DL\\aliyun\\VAE\\model', '模型保存路径')
 tf.flags.DEFINE_string('summaryDir', 'D:\\DL\\aliyun\\VAE\\logs', 'tensorboard保存路径')
-tf.flags.DEFINE_integer('batch_size', 128, 'Batch Size')
+tf.flags.DEFINE_integer('batch_size', 256, 'Batch Size')
 tf.flags.DEFINE_float('learning_rate', 1e-3, 'learning rate')
-tf.flags.DEFINE_integer('display_step', 50, 'Display step')
-tf.flags.DEFINE_float('train_step', 10000, 'Train step')
+tf.flags.DEFINE_integer('display_step', 500, 'Display step')
+tf.flags.DEFINE_float('train_step', 100000, 'Train step')
 
 train_file_path = os.path.join(FLAGS.buckets, 'train.tfrecords')
 

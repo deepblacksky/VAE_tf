@@ -59,6 +59,12 @@ class VariationalAutoEncoder(object):
             self.losses = tf.reduce_mean(reconstr_loss + latent_loss)
             tf.summary.scalar('total_losses', self.losses)
             self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.losses)
+            # check gradient
+            # optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate)
+            # grads_and_vars = optimizer.compute_gradients(self.losses)
+            # grads = [g for (g, v) in grads_and_vars][12]    # check one of all variable gradient
+            # tf.summary.histogram('gradients', grads)
+            # self.optimizer_op = optimizer.apply_gradients(grads_and_vars)
 
     def _encode_network(self):
         with tf.variable_scope('encode_network_layer_1'):
