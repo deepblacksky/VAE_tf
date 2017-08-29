@@ -5,6 +5,7 @@ VAE(Variational Auto-Encoder) tensorflow
 代码可以运行在阿里云的PAI平台上
 
 数据训练用的是mnist,最后生成的图片如下：
+
 ![](https://github.com/deepblacksky/VAE_tf/blob/master/result.png?raw=true)
 
 
